@@ -1,23 +1,33 @@
 <!doctype html>
-<html lang="en" ng-app="chartApp">
-  <head>
+<html lang="en" ng-app="sampleApp">
+<head>
     <meta charset="utf-8">
 
-<!--    <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">-->
+    <!-- Styles imported -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+    <!-- External dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="assets/chart-master/Chart.js"></script>
 
-    <script src="app/dependencies.js"></script>
-    <script src="app/config.js"></script>
+    <!-- Dynamic-charts directives -->
+    <script src="../src/app.module.js"></script>
+    <script src="../src/dynamic-chart.js"></script>
+    <script src="../src/template-chart.js"></script>
+
+    <!-- Sample scripts -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
 
     <script src="app/contacts/contacts-main-controller.js"></script>
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <div ui-view></div>
+<div ui-view></div>
 
-  </body>
+</body>
 </html>

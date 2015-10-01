@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('chartApp').controller('ContactsMainController', ContactsMainController);
+  angular.module('sampleApp').controller('ContactsMainController', ContactsMainController);
   ContactsMainController.$inject = [];
 
   function ContactsMainController() {

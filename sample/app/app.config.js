@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('chartApp').config(function($stateProvider, $urlRouterProvider) {
+  angular.module('sampleApp').config(function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/contacts");
 

@@ -1,0 +1,8 @@
+<div ng-controller="InputsMainController as inputsVm">
+    <span>{{formsVm.initial}}</span>
+
+    <input id="labels">
+
+    <canvas id="line" class="chart chart-line" chart-data="inputsVm.data" chart-labels="inputsVm.labels"
+            chart-legend="true" chart-series="inputsVm.series" chart-click="inputsVm.onClick"></canvas>
+</div>

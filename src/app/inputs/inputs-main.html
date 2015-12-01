@@ -1,4 +1,4 @@
-<div ng-controller="InputsMainController as inputsVm">
+<div ng-controller="InputsMainController as inputsVm" ng-init="onReady()" ng-cloak>
     <span>{{inputsVm.initial}}</span>
 
     <canvas id="line" class="chart chart-line" chart-data="inputsVm.data" chart-labels="inputsVm.labels"
@@ -6,25 +6,20 @@
 
     <button class="btn btn-default" type="submit" ng-click="counter = counter+1">+</button>
 
-    <button class="btn btn-default" data-toggle="popover" title="Select values"
-            data-content='{{inputsVm.dynamicPopover.template}}'>Popover
-    </button>
+    <button id="openPopover" data-toggle="popover" title="Select values" style="visibility:hidden"></button>
 
     <div id="popover-content" style="display:none">
         <div class="form-group">
             <div class="form-half">
-                <label>{{inputsVm.dynamicPopover.labels[0]}}</label>
-                <input type="text" ng-model="inputsVm.dynamicPopover.values[0]" class="form-control">
+                <label>{{inputsVm.dynamicPopover.labels.x}}</label>
+                <!-- ¿ Porque no va con ng-model y si con value ? -->
+                <input type="text" value="{{inputsVm.dynamicPopover.values.x}}" class="form-control"/>
             </div>
             <div class="form-half">
-                <label>{{inputsVm.dynamicPopover.labels[1]}}</label>
-                <input type="text" ng-model="inputsVm.dynamicPopover.values[1]" class="form-control">
+                <label>{{inputsVm.dynamicPopover.labels.y}}</label>
+                <input type="text" value="{{inputsVm.dynamicPopover.values.y}}" class="form-control"/>
             </div>
         </div>
     </div>
-
-    <script>
-        $("[data-toggle=popover]").popover();
-    </script>
 
 </div>

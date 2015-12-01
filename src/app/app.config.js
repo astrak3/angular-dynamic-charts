@@ -1,16 +1,16 @@
-(function(){
-  'use strict';
+(function () {
+    'use strict';
 
-  angular.module('dynamicCharts').config(function($stateProvider, $urlRouterProvider) {
+    angular.module('dynamicCharts').config(function ($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise("/inputs");
+        $urlRouterProvider.otherwise("/inputs");
 
-  $stateProvider
-    .state('inputs', {
-      url: "/inputs",
-      templateUrl: "app/inputs/inputs-main.html"
+        $stateProvider
+            .state('inputs', {
+                url: "/inputs",
+                templateUrl: "app/inputs/inputs-main.html"
+            });
+
     });
-
-});
 
 })();

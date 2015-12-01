@@ -1,8 +1,30 @@
 <div ng-controller="InputsMainController as inputsVm">
-    <span>{{formsVm.initial}}</span>
-
-    <input id="labels">
+    <span>{{inputsVm.initial}}</span>
 
     <canvas id="line" class="chart chart-line" chart-data="inputsVm.data" chart-labels="inputsVm.labels"
             chart-legend="true" chart-series="inputsVm.series" chart-click="inputsVm.onClick"></canvas>
+
+    <button class="btn btn-default" type="submit" ng-click="counter = counter+1">+</button>
+
+    <button class="btn btn-default" data-toggle="popover" title="Select values"
+            data-content='{{inputsVm.dynamicPopover.template}}'>Popover
+    </button>
+
+    <div id="popover-content" style="display:none">
+        <div class="form-group">
+            <div class="form-half">
+                <label>{{inputsVm.dynamicPopover.labels[0]}}</label>
+                <input type="text" ng-model="inputsVm.dynamicPopover.values[0]" class="form-control">
+            </div>
+            <div class="form-half">
+                <label>{{inputsVm.dynamicPopover.labels[1]}}</label>
+                <input type="text" ng-model="inputsVm.dynamicPopover.values[1]" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("[data-toggle=popover]").popover();
+    </script>
+
 </div>

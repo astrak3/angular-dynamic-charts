@@ -1,11 +1,11 @@
 (function () {
     'use strict';
 
-    angular.module('sampleApp', [
+    angular.module('dynamicCharts', [
         'ui.bootstrap',
         'ui.router',
-        'chart.js',
-        'chartApp'
+        'ngAnimate',
+        'chart.js'
     ]);
 
 })();

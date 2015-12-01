@@ -4,7 +4,7 @@
   "authors": [
     "ivanros92"
   ],
-  "description": "angular directives for dynamic charts",
+  "description": "Chart.js dynamic inputs implementation",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -15,7 +15,9 @@
   ],
   "dependencies": {
     "angular": "latest",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "angular-animate": "latest",
+    "angular-chart.js": "~0.8.4"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.16"

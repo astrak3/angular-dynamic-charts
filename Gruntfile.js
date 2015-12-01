@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     connect: {
       server: {},
-      sample: {
+      src: {
         options:{
           port: 5555,
           keepalive: true
@@ -30,6 +30,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['uglify']);
-  grunt.registerTask('sample', 'Run connect server with keepalive:true for sample app development', ['connect:sample']);
+  grunt.registerTask('start', 'Run connect server with keepalive:true for app development', ['connect:src']);
 
 };

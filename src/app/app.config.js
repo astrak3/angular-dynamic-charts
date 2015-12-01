@@ -1,14 +1,14 @@
 (function(){
   'use strict';
 
-  angular.module('sampleApp').config(function($stateProvider, $urlRouterProvider) {
+  angular.module('dynamicCharts').config(function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise("/contacts");
+  $urlRouterProvider.otherwise("/inputs");
 
   $stateProvider
-    .state('contacts', {
-      url: "/contacts",
-      templateUrl: "app/contacts/contacts-main.html"
+    .state('inputs', {
+      url: "/inputs",
+      templateUrl: "app/inputs/inputs-main.html"
     });
 
 });
